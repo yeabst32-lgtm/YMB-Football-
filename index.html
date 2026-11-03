@@ -205,5 +205,24 @@ requestAnimationFrame(loop);
 }
 
 </script>
-</body>
+</body>const oldStart = start;
+start = function(){
+let choice = prompt(
+"Choose Team:\n1. Ethiopia\n2. Real Madrid\n3. Barcelona\n4. Manchester City\n5. Arsenal",
+"1"
+);
+
+let teams = {
+"1":"🇪🇹 ETHIOPIA",
+"2":"⚪ REAL MADRID",
+"3":"🔵 BARCELONA",
+"4":"🔵 MANCHESTER CITY",
+"5":"🔴 ARSENAL"
+};
+
+document.querySelector("header").innerText =
+"⚽ "+(teams[choice] || teams["1"]);
+
+oldStart();
+};
 </html>
